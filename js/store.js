@@ -62,7 +62,6 @@
 		return;
 	  }
 
-      console.log(query);
       this.store.list({filters: query}).then(function(results) {
         callback.call(this, results.data);
       }.bind(this))

@@ -46,7 +46,6 @@
 	};
 
 	View.prototype._elementComplete = function (id, completed) {
-        console.log(id, completed);
 		var listItem = qs('[data-id="' + id + '"]');
 
 		if (!listItem) {
@@ -121,7 +120,6 @@
 				self.$newTodo.value = '';
 			},
 			elementComplete: function () {
-              console.log(parameter);
 				self._elementComplete(parameter.id, parameter.done);
 			},
 			editItem: function () {
@@ -132,7 +130,6 @@
 			}
 		};
 
-      console.log("render", viewCmd, parameter);
 		viewCommands[viewCmd]();
 	};
 
