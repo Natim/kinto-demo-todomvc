@@ -15,13 +15,13 @@
 		this.controller = new app.Controller(this.model, this.view);
 	}
 
-    var userpass64 = btoa("public:notsecret");
+    	var userpass64 = btoa("public:notsecret");
 	var todo = new Todo({
-      remove: "https://kinto.dev.mozaws.net/v1",
-      bucket: "default",
-      collection: "tasks",
-      headers: {Authorization: "Basic " + userpass64}
-    });
+	  remote: "https://kinto.dev.mozaws.net/v1",
+	  bucket: "default",
+	  collection: "tasks",
+	  headers: {Authorization: "Basic " + userpass64}
+	});
 
 	function setView() {
 		todo.controller.setView(document.location.hash);
